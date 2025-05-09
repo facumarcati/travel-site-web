@@ -13,7 +13,7 @@ body {
 
 #main-destinos {
   width: 100%;
-  height: 80vh;
+  min-height: 80vh;
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -95,6 +95,42 @@ body {
     }
     .buscar-destino-btn:hover {
       background-color: #d35400;
+    }
+  }
+}
+
+.container-destinos-continente {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .destinos-continente-titulo {
+    h1 {
+      font-size: 40px;
+      color: #e67e22;
+    }
+  }
+  .destinos-continentes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    h3 {
+      font-size: 18px;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  }
+  .destinos-continentes-opciones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    h3 {
+      font-size: 14px;
+      font-weight: 500;
+      background-color: rgba(0, 0, 0, 0.3);
+      border: 1px solid white;
+      padding: 10px 20px;
+      border-radius: 30px;
+      cursor: pointer;
     }
   }
 }
