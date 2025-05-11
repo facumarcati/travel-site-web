@@ -14,7 +14,7 @@ body {
 #main-destinos {
   width: 100%;
   min-height: 80vh;
-  padding: 28px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -26,11 +26,11 @@ body {
   gap: 10px;
 }
 .container-titulo-destinos h1 {
-  font-size: 40px;
+  font-size: 36px;
   color: #e67e22;
 }
 .container-titulo-destinos h3 {
-  font-size: 22px;
+  font-size: 18px;
   color: #bdc3c7;
   font-weight: 400;
 }
@@ -103,7 +103,7 @@ body {
   gap: 20px;
 }
 .container-destinos-continente .destinos-continente-titulo h1 {
-  font-size: 40px;
+  font-size: 28px;
   color: #e67e22;
 }
 .container-destinos-continente .destinos-continentes {
@@ -113,6 +113,7 @@ body {
 }
 .container-destinos-continente .destinos-continentes h3 {
   font-size: 18px;
+  font-weight: 500;
   cursor: pointer;
   text-decoration: underline;
 }
@@ -129,6 +130,60 @@ body {
   padding: 10px 20px;
   border-radius: 30px;
   cursor: pointer;
+}
+
+.container-destinos-temporada {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+.container-destinos-temporada .titulo-destinos-temporada {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+.container-destinos-temporada .titulo-destinos-temporada h1 {
+  font-size: 28px;
+  color: #e67e22;
+}
+.container-destinos-temporada .titulo-destinos-temporada h3 {
+  font-size: 18px;
+  color: #bdc3c7;
+  font-weight: 400;
+}
+.container-destinos-temporada .container-cards-destinos-temporada {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada {
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid #444;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada .imagen-destino-card {
+  width: 300px;
+  height: 160px;
+  border-start-start-radius: 12px;
+  border-start-end-radius: 12px;
+  border: none;
+  background-color: grey;
+}
+.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada .ciudad-destino-card {
+  padding: 8px 16px 8px 16px;
+  font-size: 20px;
+}
+.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada .pais-destino-card {
+  padding: 0px 16px 16px 16px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #bdc3c7;
+}
+.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada:hover {
+  transform: translateY(-10px);
 }
 
 .contact-container {
