@@ -65,9 +65,6 @@ body {
   background-color: #e67e22;
 }
 
-.container-buscar-destino {
-  margin-bottom: 30px;
-}
 .container-buscar-destino .buscar-destino {
   display: flex;
   width: 100%;
@@ -184,6 +181,126 @@ body {
 }
 .container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada:hover {
   transform: translateY(-10px);
+}
+
+.container-destinos-destacados {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container-destinos-destacados .destinos-destacados-titulo h1 {
+  font-size: 28px;
+  color: #e67e22;
+}
+.container-destinos-destacados .container-cards-destinos-destacados {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 12px;
+  align-items: stretch;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados {
+  position: relative;
+  min-height: fit-content;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 2px solid #444;
+  border-radius: 20px;
+  overflow: hidden;
+  flex-wrap: wrap;
+  transition: all 0.3s ease;
+  border: 1px solid #444;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-badge {
+  background-color: red;
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+  z-index: 10;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .imagen-destino-principal-card {
+  height: 200px;
+  background-size: cover;
+  background-position: center;
+  border-start-start-radius: 12px;
+  border-start-end-radius: 12px;
+  border: none;
+  background-color: grey;
+  background-size: cover;
+  background-position: center;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto {
+  padding: 10px 24px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .season-rating {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .season-rating .season {
+  color: skyblue;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .season-rating .rating {
+  color: gold;
+  letter-spacing: 2px;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .ciudad-destino-principal-card {
+  font-size: 24px;
+  font-weight: 700;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .pais-destino-principal-card {
+  font-size: 16px;
+  font-weight: 500;
+  color: #bdc3c7;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .descripcion-destino-principal-card {
+  font-size: 14px;
+  font-weight: 500;
+  color: #999;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .card-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .card-features span {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .btn-ver-mas-destino-princ-card {
+  height: 44px;
+  width: 100px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #e67e22;
+  color: white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border: none;
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .btn-ver-mas-destino-princ-card:hover {
+  background-color: #d35400;
+  transform: translateY(-2px);
+}
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados:hover {
+  transform: translateY(-5px);
 }
 
 .contact-container {
