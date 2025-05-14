@@ -117,7 +117,6 @@ body {
   border: none;
   border-bottom: 2px solid #555;
   white-space: nowrap;
-  cursor: pointer;
   transition: all 0.3s ease;
 }
 .container-destinos-continente .destinos-continentes h3:hover {
