@@ -67,8 +67,8 @@ body {
 
 .container-buscar-destino .buscar-destino {
   display: flex;
-  width: 90%;
-  height: 50px;
+  width: 70%;
+  height: 90px;
   margin: 0 auto;
 }
 .container-buscar-destino .buscar-destino .buscar-destino-input {
@@ -169,14 +169,19 @@ body {
   flex-wrap: wrap;
   gap: 24px;
 }
-.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada {
+.container-destinos-temporada
+  .container-cards-destinos-temporada
+  .card-destino-temporada {
   background-color: rgba(0, 0, 0, 0.3);
   border: 2px solid #444;
   border-radius: 20px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada .imagen-destino-card {
+.container-destinos-temporada
+  .container-cards-destinos-temporada
+  .card-destino-temporada
+  .imagen-destino-card {
   width: 300px;
   height: 160px;
   border-start-start-radius: 12px;
@@ -184,17 +189,25 @@ body {
   border: none;
   background-color: grey;
 }
-.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada .ciudad-destino-card {
+.container-destinos-temporada
+  .container-cards-destinos-temporada
+  .card-destino-temporada
+  .ciudad-destino-card {
   padding: 8px 16px 8px 16px;
   font-size: 20px;
 }
-.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada .pais-destino-card {
+.container-destinos-temporada
+  .container-cards-destinos-temporada
+  .card-destino-temporada
+  .pais-destino-card {
   padding: 0px 16px 16px 16px;
   font-size: 16px;
   font-weight: 400;
   color: #bdc3c7;
 }
-.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada:hover {
+.container-destinos-temporada
+  .container-cards-destinos-temporada
+  .card-destino-temporada:hover {
   transform: translateY(-10px);
 }
 
@@ -215,7 +228,9 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados {
   position: relative;
   min-height: fit-content;
   width: 100%;
@@ -232,7 +247,10 @@ body {
   border: 1px solid #444;
   align-items: stretch;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-badge {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-badge {
   background-color: red;
   position: absolute;
   left: 16px;
@@ -243,7 +261,10 @@ body {
   border-radius: 4px;
   z-index: 10;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .imagen-destino-principal-card {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .imagen-destino-principal-card {
   height: 220px;
   min-width: 100%;
   width: 100%;
@@ -252,55 +273,97 @@ body {
   border-start-end-radius: 12px;
   border: none;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-destinos-texto {
   padding: 10px 24px 24px 24px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 8px;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .season-rating {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-destinos-texto
+  .season-rating {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .season-rating .season {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-destinos-texto
+  .season-rating
+  .season {
   color: skyblue;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .season-rating .rating {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-destinos-texto
+  .season-rating
+  .rating {
   color: gold;
   letter-spacing: 2px;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .ciudad-destino-principal-card {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-destinos-texto
+  .ciudad-destino-principal-card {
   font-size: 24px;
   font-weight: 700;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .pais-destino-principal-card {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-destinos-texto
+  .pais-destino-principal-card {
   font-size: 16px;
   font-weight: 500;
   color: #bdc3c7;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .descripcion-destino-principal-card {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-destinos-texto
+  .descripcion-destino-principal-card {
   font-size: 14px;
   font-weight: 500;
   color: #999;
   height: 100px;
   overflow: hidden;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .card-features {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-destinos-texto
+  .card-features {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .card-features span {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-destinos-texto
+  .card-features
+  span {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 4px 8px;
   border-radius: 6px;
   font-size: 14px;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .btn-ver-mas-destino-princ-card {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-destinos-texto
+  .btn-ver-mas-destino-princ-card {
   height: 44px;
   width: 100px;
   font-size: 16px;
@@ -311,12 +374,159 @@ body {
   transition: all 0.3s ease;
   border: none;
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .btn-ver-mas-destino-princ-card:hover {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados
+  .card-destinos-texto
+  .btn-ver-mas-destino-princ-card:hover {
   background-color: #d35400;
   transform: translateY(-2px);
 }
-.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados:hover {
+.container-destinos-destacados
+  .container-cards-destinos-destacados
+  .card-destinos-destacados:hover {
   transform: translateY(-5px);
+}
+
+.container-comentarios {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container-comentarios .comentarios-titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container-comentarios .comentarios-titulo h1 {
+  font-size: 28px;
+  color: #e67e22;
+}
+.container-comentarios .comentarios-titulo h4 {
+  font-size: 18px;
+  color: #bdc3c7;
+  font-weight: 400;
+}
+.container-comentarios .container-cards-comentarios {
+  display: flex;
+  gap: 24px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 20px 28px;
+  border: 1px solid #444;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+.container-comentarios
+  .container-cards-comentarios
+  .card-comentario
+  .container-info-viajero {
+  display: flex;
+  gap: 20px;
+}
+.container-comentarios
+  .container-cards-comentarios
+  .card-comentario
+  .container-info-viajero
+  .foto-viajero {
+  width: 60px;
+  height: 60px;
+  background-color: #525455;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-comentarios
+  .container-cards-comentarios
+  .card-comentario
+  .container-info-viajero
+  .nombre-viajero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-comentarios
+  .container-cards-comentarios
+  .card-comentario
+  .container-info-viajero
+  .nombre-viajero
+  h2 {
+  font-size: 20px;
+}
+.container-comentarios
+  .container-cards-comentarios
+  .card-comentario
+  .container-info-viajero
+  .nombre-viajero
+  h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #bdc3c7;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .rating {
+  color: gold;
+  letter-spacing: 2px;
+}
+.container-comentarios
+  .container-cards-comentarios
+  .card-comentario
+  .comentario-viaje
+  h2 {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+}
+.container-comentarios
+  .container-cards-comentarios
+  .card-comentario
+  .container-fotos-viaje {
+  display: flex;
+  gap: 10px;
+  padding-top: 8px;
+}
+.container-comentarios
+  .container-cards-comentarios
+  .card-comentario
+  .container-fotos-viaje
+  .foto-viaje {
+  height: 60px;
+  width: 80px;
+  background-color: #525455;
+  border-radius: 8px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario:hover {
+  transform: translateY(-5px);
+}
+.container-comentarios .container-btn-ver-experiencia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.container-comentarios .container-btn-ver-experiencia .btn-ver-experiencias {
+  height: 50px;
+  width: 220px;
+  background-color: #e67e22;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.container-comentarios
+  .container-btn-ver-experiencia
+  .btn-ver-experiencias:hover {
+  background-color: #d35400;
 }
 
 .container-newsletter {
@@ -374,6 +584,37 @@ body {
 }
 .container-newsletter .container-correo-newsletter .btn-suscribirse:hover {
   background-color: #d35400;
+}
+
+@media (max-width: 768px) {
+  .container-cards-comentarios {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1200px) {
+  #main-destinos {
+    padding: 0 20vh;
+  }
+  .container-newsletter .container-correo-newsletter {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    padding: 0 50vh;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0 10px;
+  }
+  .container-newsletter .container-correo-newsletter .correo {
+    border-radius: 0;
+    border-start-start-radius: 6px;
+    border-end-start-radius: 6px;
+  }
+  .container-newsletter .container-correo-newsletter .btn-suscribirse {
+    flex: 0.1;
+    border-radius: 0;
+    border-start-end-radius: 6px;
+    border-end-end-radius: 6px;
+  }
 }
 
 /*# sourceMappingURL=destinos.css.map */
