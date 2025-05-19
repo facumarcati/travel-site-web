@@ -1,0 +1,47 @@
+#main-nosotros {
+  width: 100%;
+  min-height: 80vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.main-intro .titulo-nosotros {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.main-intro h1 {
+  font-size: 36px;
+  color: #e67e22;
+}
+.main-intro h3 {
+  font-size: 18px;
+  color: #bdc3c7;
+  font-weight: 400;
+}
+
+.grid-container-video-about-us {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.grid-container-video-about-us .video-sobre-nosotros {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+.grid-container-video-about-us .quienes-somos-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.grid-container-video-about-us .quienes-somos-container h2 {
+  font-size: 18px;
+  color: #e67e22;
+}
+
+/*# sourceMappingURL=nosotros.css.map */
