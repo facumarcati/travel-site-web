@@ -34,14 +34,21 @@
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     object-fit: cover;
   }
-  .quienes-somos-container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    h2 {
-      font-size: 18px;
-      color: #e67e22;
-    }
+}
+
+.quienes-somos-container {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+
+  .quienes-somos-container-title {
+    font-size: 18px;
+    color: #e67e22;
   }
 }
