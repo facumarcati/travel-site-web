@@ -97,15 +97,95 @@ ul {
   justify-content: center;
 }
 
-.content-image-index {
-  display: flex;
-  justify-content: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
-.content-image-index .image-travel {
-  width: 100vw; /* 100% del viewport width (ancho visible) */
-  margin: 0; /* Elimina márgenes por defecto */
-  padding: 0; /* Elimina rellenos si es necesario */
-  box-sizing: border-box; /* Incluye padding/border en el ancho */
+
+body {
+  background: linear-gradient(to bottom, #2c3e50, #1a1a1a);
+  color: #f4f4f4;
+  line-height: 1.6;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas: "header" "content" "footer";
+  min-height: 100vh;
+}
+
+.grid-container .header {
+  grid-area: header;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.grid-container .header .navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  padding: 1rem 1.25rem;
+}
+
+.grid-container .header .navbar .logo {
+  font-size: 2.25rem;
+  font-weight: bold;
+  text-align: center;
+  color: #f4f4f4;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .grid-container .header .navbar .logo {
+    font-size: 2rem;
+  }
+}
+.grid-container .header .navbar .nav-links {
+  padding: 1rem 0rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.grid-container .header .navbar .nav-links .nav-item {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.grid-container .header .navbar .nav-links .nav-item a {
+  font-size: 16px;
+  color: #bdc3c7;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .grid-container .header .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+  .grid-container .header .navbar .nav-links {
+    gap: 1rem;
+  }
+}
+.grid-container .content {
+  grid-area: content;
+}
+
+.grid-container .footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #main-destinos {
@@ -160,6 +240,7 @@ ul {
   border-radius: 20px;
   font-size: 16px;
   transition: all 0.3s ease;
+  cursor: pointer;
 }
 .container-destinos-categoria .destinos-categoria-filtro .filtro:hover {
   background-color: #e67e22;
@@ -172,7 +253,7 @@ ul {
   margin: 0 auto;
 }
 .container-buscar-destino .buscar-destino .buscar-destino-input {
-  width: 80%;
+  width: 100%;
   border-start-start-radius: 10px;
   border-end-start-radius: 10px;
   padding-left: 20px;
@@ -275,6 +356,7 @@ ul {
   border-radius: 20px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 .container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada .imagen-destino-card {
   width: 300px;
@@ -399,6 +481,7 @@ ul {
   padding: 4px 8px;
   border-radius: 6px;
   font-size: 14px;
+  cursor: pointer;
 }
 .container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .btn-ver-mas-destino-princ-card {
   height: 44px;
@@ -410,13 +493,122 @@ ul {
   border-radius: 4px;
   transition: all 0.3s ease;
   border: none;
+  cursor: pointer;
 }
 .container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .btn-ver-mas-destino-princ-card:hover {
   background-color: #d35400;
   transform: translateY(-2px);
 }
 .container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados:hover {
+
   transform: translateY(-5px);
+}
+
+.container-comentarios {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container-comentarios .comentarios-titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container-comentarios .comentarios-titulo h1 {
+  font-size: 28px;
+  color: #e67e22;
+}
+.container-comentarios .comentarios-titulo h4 {
+  font-size: 18px;
+  color: #bdc3c7;
+  font-weight: 400;
+}
+.container-comentarios .container-cards-comentarios {
+  display: flex;
+  gap: 24px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 20px 28px;
+  border: 1px solid #444;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-info-viajero {
+  display: flex;
+  gap: 20px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-info-viajero .foto-viajero {
+  width: 60px;
+  height: 60px;
+  background-color: #525455;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-info-viajero .nombre-viajero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-info-viajero .nombre-viajero h2 {
+  font-size: 20px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-info-viajero .nombre-viajero h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #bdc3c7;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .rating {
+  color: gold;
+  letter-spacing: 2px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .comentario-viaje h2 {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-fotos-viaje {
+  display: flex;
+  gap: 10px;
+  padding-top: 8px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-fotos-viaje .foto-viaje {
+  height: 60px;
+  width: 80px;
+  background-color: #525455;
+  border-radius: 8px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario:hover {
+  transform: translateY(-5px);
+}
+.container-comentarios .container-btn-ver-experiencia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.container-comentarios .container-btn-ver-experiencia .btn-ver-experiencias {
+  height: 50px;
+  width: 220px;
+  background-color: #e67e22;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.container-comentarios .container-btn-ver-experiencia .btn-ver-experiencias:hover {
+  background-color: #d35400;
 }
 
 .container-comentarios {
@@ -537,6 +729,7 @@ ul {
   align-items: center;
   text-align: center;
   gap: 16px;
+  margin-bottom: 50px;
 }
 .container-newsletter .container-titulo-newsletter {
   display: flex;
@@ -581,6 +774,22 @@ ul {
 }
 .container-newsletter .container-correo-newsletter .btn-suscribirse:hover {
   background-color: #d35400;
+}
+
+#footer {
+  width: 100%;
+  height: 14vh;
+  border-top: 1px solid #444;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#footer p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #bdc3c7;
+  font-size: 16px;
 }
 
 @media (max-width: 768px) {
@@ -716,6 +925,122 @@ ul {
 .contactForm .simple-form button:hover {
   background-color: #d35400;
   transform: translateY(-2px);
+}
+
+.cards-grid-container .card, .quienes-somos-container, .main-intro .titulo-nosotros, #main-nosotros {
+  display: flex;
+  flex-direction: column;
+}
+
+#main-nosotros {
+  width: 100%;
+  min-height: 80vh;
+  padding: 20px;
+  gap: 40px;
+}
+
+.main-intro .titulo-nosotros {
+  gap: 10px;
+}
+.main-intro h1 {
+  font-size: 36px;
+  color: #e67e22;
+}
+.main-intro h3 {
+  font-size: 18px;
+  color: #bdc3c7;
+  font-weight: 400;
+}
+
+.grid-container-video-about-us {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+  gap: 20px;
+}
+.grid-container-video-about-us .video-sobre-nosotros {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+.grid-container-video-about-us .video-sobre-nosotros:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.quienes-somos-container {
+  flex: 1;
+  min-width: 300px;
+  gap: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+.quienes-somos-container:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.quienes-somos-container .quienes-somos-container-title {
+  font-size: 18px;
+  color: #e67e22;
+}
+.quienes-somos-container p {
+  font-size: 14px;
+  color: #bdc3c7;
+}
+
+.cards-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.cards-grid-container .card {
+  flex: 1;
+  min-width: 300px;
+  gap: 5px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+.cards-grid-container .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.cards-grid-container .card h3 {
+  font-size: 22px;
+  color: #e67e22;
+  margin-bottom: 10px;
+}
+.cards-grid-container .card p {
+  font-size: 16px;
+  color: #bdc3c7;
+  margin-bottom: 10px;
+}
+
+.quote {
+  text-align: center;
+  font-style: italic;
+  font-size: 1.4em;
+  color: #555;
+}
+
+#footer {
+  width: 100%;
+  height: 14vh;
+  border-top: 1px solid #444;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#footer p {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #bdc3c7;
+  font-size: 16px;
 }
 
 /*# sourceMappingURL=styles.css.map */
