@@ -1,0 +1,11 @@
+.content-image-index {
+  display: flex;
+
+  justify-content: center;
+  .image-travel {
+    width: 100vw; /* 100% del viewport width (ancho visible) */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 0; /* Elimina rellenos si es necesario */
+    box-sizing: border-box; /* Incluye padding/border en el ancho */
+  }
+}

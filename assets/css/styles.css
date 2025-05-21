@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +13,16 @@ body {
   background-repeat: no-repeat;
   color: #f4f4f4;
   line-height: 1.6;
+}
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+header nav {
+  margin: 0;
+  padding: 0;
 }
 
 a {
@@ -37,8 +48,22 @@ ul {
 .grid-container .header .navbar {
   display: flex;
   flex-direction: column;
-  gap: 0rem;
+  gap: 1rem;
   padding: 1rem 1.25rem;
+}
+@media (min-width: 768px) {
+  .grid-container .header .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 1.25rem;
+  }
+}
+@media (min-width: 1200px) {
+  .grid-container .header .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 20vh;
+  }
 }
 .grid-container .header .navbar .logo {
   font-size: 2.25rem;
@@ -46,31 +71,21 @@ ul {
   text-align: center;
   color: #f4f4f4;
 }
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
   .grid-container .header .navbar .logo {
     font-size: 2rem;
   }
 }
 .grid-container .header .navbar .nav-links {
-  padding: 1rem 0rem;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
+  align-items: center;
   font-size: 0.8rem;
+  gap: 1rem;
 }
 .grid-container .header .navbar .nav-links .nav-item a {
   color: #bdc3c7;
-}
-@media (min-width: 768px) {
-  .grid-container .header .navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-  }
-  .grid-container .header .navbar .nav-links {
-    gap: 1rem;
-  }
 }
 .grid-container .content {
   grid-area: content;
@@ -82,6 +97,17 @@ ul {
   justify-content: center;
 }
 
+.content-image-index {
+  display: flex;
+  justify-content: center;
+}
+.content-image-index .image-travel {
+  width: 100vw; /* 100% del viewport width (ancho visible) */
+  margin: 0; /* Elimina márgenes por defecto */
+  padding: 0; /* Elimina rellenos si es necesario */
+  box-sizing: border-box; /* Incluye padding/border en el ancho */
+}
+
 #main-destinos {
   width: 100%;
   min-height: 80vh;
@@ -91,6 +117,9 @@ ul {
   gap: 40px;
 }
 
+.container-titulo-destinos {
+  padding-top: 40px;
+}
 .container-titulo-destinos .titulo-destinos {
   display: flex;
   flex-direction: column;
@@ -139,7 +168,7 @@ ul {
 .container-buscar-destino .buscar-destino {
   display: flex;
   width: 100%;
-  height: 50px;
+  height: 90px;
   margin: 0 auto;
 }
 .container-buscar-destino .buscar-destino .buscar-destino-input {
@@ -151,7 +180,7 @@ ul {
   border: none;
 }
 .container-buscar-destino .buscar-destino .buscar-destino-btn {
-  width: 20%;
+  width: 14%;
   background-color: #e67e22;
   color: white;
   border-start-end-radius: 10px;
@@ -240,19 +269,14 @@ ul {
   flex-wrap: wrap;
   gap: 24px;
 }
-.container-destinos-temporada
-  .container-cards-destinos-temporada
-  .card-destino-temporada {
+.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada {
   background-color: rgba(0, 0, 0, 0.3);
   border: 2px solid #444;
   border-radius: 20px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.container-destinos-temporada
-  .container-cards-destinos-temporada
-  .card-destino-temporada
-  .imagen-destino-card {
+.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada .imagen-destino-card {
   width: 300px;
   height: 160px;
   border-start-start-radius: 12px;
@@ -260,25 +284,17 @@ ul {
   border: none;
   background-color: grey;
 }
-.container-destinos-temporada
-  .container-cards-destinos-temporada
-  .card-destino-temporada
-  .ciudad-destino-card {
+.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada .ciudad-destino-card {
   padding: 8px 16px 8px 16px;
   font-size: 20px;
 }
-.container-destinos-temporada
-  .container-cards-destinos-temporada
-  .card-destino-temporada
-  .pais-destino-card {
+.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada .pais-destino-card {
   padding: 0px 16px 16px 16px;
   font-size: 16px;
   font-weight: 400;
   color: #bdc3c7;
 }
-.container-destinos-temporada
-  .container-cards-destinos-temporada
-  .card-destino-temporada:hover {
+.container-destinos-temporada .container-cards-destinos-temporada .card-destino-temporada:hover {
   transform: translateY(-10px);
 }
 
@@ -290,15 +306,16 @@ ul {
 .container-destinos-destacados .destinos-destacados-titulo h1 {
   font-size: 28px;
   color: #e67e22;
+  padding: 10px 0;
+  background-color: transparent;
+  border: none;
 }
 .container-destinos-destacados .container-cards-destinos-destacados {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados {
   position: relative;
   min-height: fit-content;
   width: 100%;
@@ -315,10 +332,7 @@ ul {
   border: 1px solid #444;
   align-items: stretch;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-badge {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-badge {
   background-color: red;
   position: absolute;
   left: 16px;
@@ -329,10 +343,7 @@ ul {
   border-radius: 4px;
   z-index: 10;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .imagen-destino-principal-card {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .imagen-destino-principal-card {
   height: 220px;
   min-width: 100%;
   width: 100%;
@@ -341,97 +352,55 @@ ul {
   border-start-end-radius: 12px;
   border: none;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-destinos-texto {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto {
   padding: 10px 24px 24px 24px;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   gap: 8px;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-destinos-texto
-  .season-rating {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .season-rating {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-destinos-texto
-  .season-rating
-  .season {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .season-rating .season {
   color: skyblue;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-destinos-texto
-  .season-rating
-  .rating {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .season-rating .rating {
   color: gold;
   letter-spacing: 2px;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-destinos-texto
-  .ciudad-destino-principal-card {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .ciudad-destino-principal-card {
   font-size: 24px;
   font-weight: 700;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-destinos-texto
-  .pais-destino-principal-card {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .pais-destino-principal-card {
   font-size: 16px;
   font-weight: 500;
   color: #bdc3c7;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-destinos-texto
-  .descripcion-destino-principal-card {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .descripcion-destino-principal-card {
   font-size: 14px;
   font-weight: 500;
   color: #999;
   height: 100px;
   overflow: hidden;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-destinos-texto
-  .card-features {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .card-features {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-destinos-texto
-  .card-features
-  span {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .card-features span {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 4px 8px;
   border-radius: 6px;
   font-size: 14px;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-destinos-texto
-  .btn-ver-mas-destino-princ-card {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .btn-ver-mas-destino-princ-card {
   height: 44px;
   width: 100px;
   font-size: 16px;
@@ -442,18 +411,119 @@ ul {
   transition: all 0.3s ease;
   border: none;
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados
-  .card-destinos-texto
-  .btn-ver-mas-destino-princ-card:hover {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados .card-destinos-texto .btn-ver-mas-destino-princ-card:hover {
   background-color: #d35400;
   transform: translateY(-2px);
 }
-.container-destinos-destacados
-  .container-cards-destinos-destacados
-  .card-destinos-destacados:hover {
+.container-destinos-destacados .container-cards-destinos-destacados .card-destinos-destacados:hover {
   transform: translateY(-5px);
+}
+
+.container-comentarios {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.container-comentarios .comentarios-titulo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.container-comentarios .comentarios-titulo h1 {
+  font-size: 28px;
+  color: #e67e22;
+}
+.container-comentarios .comentarios-titulo h4 {
+  font-size: 18px;
+  color: #bdc3c7;
+  font-weight: 400;
+}
+.container-comentarios .container-cards-comentarios {
+  display: flex;
+  gap: 24px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario {
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  padding: 20px 28px;
+  border: 1px solid #444;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-info-viajero {
+  display: flex;
+  gap: 20px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-info-viajero .foto-viajero {
+  width: 60px;
+  height: 60px;
+  background-color: #525455;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-info-viajero .nombre-viajero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-info-viajero .nombre-viajero h2 {
+  font-size: 20px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-info-viajero .nombre-viajero h3 {
+  font-size: 14px;
+  font-weight: 400;
+  color: #bdc3c7;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .rating {
+  color: gold;
+  letter-spacing: 2px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .comentario-viaje h2 {
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-fotos-viaje {
+  display: flex;
+  gap: 10px;
+  padding-top: 8px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario .container-fotos-viaje .foto-viaje {
+  height: 60px;
+  width: 80px;
+  background-color: #525455;
+  border-radius: 8px;
+}
+.container-comentarios .container-cards-comentarios .card-comentario:hover {
+  transform: translateY(-5px);
+}
+.container-comentarios .container-btn-ver-experiencia {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+.container-comentarios .container-btn-ver-experiencia .btn-ver-experiencias {
+  height: 50px;
+  width: 220px;
+  background-color: #e67e22;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.container-comentarios .container-btn-ver-experiencia .btn-ver-experiencias:hover {
+  background-color: #d35400;
 }
 
 .container-newsletter {
@@ -513,6 +583,36 @@ ul {
   background-color: #d35400;
 }
 
+@media (max-width: 768px) {
+  .container-cards-comentarios {
+    flex-direction: column;
+  }
+}
+@media (min-width: 1200px) {
+  #main-destinos {
+    padding: 0 20vh;
+  }
+  .container-newsletter .container-correo-newsletter {
+    display: flex;
+    flex-direction: row;
+    gap: 0px;
+    padding: 0 50vh;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 0 10px;
+  }
+  .container-newsletter .container-correo-newsletter .correo {
+    border-radius: 0;
+    border-start-start-radius: 6px;
+    border-end-start-radius: 6px;
+  }
+  .container-newsletter .container-correo-newsletter .btn-suscribirse {
+    flex: 0.1;
+    border-radius: 0;
+    border-start-end-radius: 6px;
+    border-end-end-radius: 6px;
+  }
+}
 .contact-container {
   width: 100%;
   padding: 30px;
