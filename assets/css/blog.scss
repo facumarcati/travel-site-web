@@ -1,282 +1,158 @@
-// Variables
-$primary-text: #333;
-$secondary-text: #666;
-$highlight: #f4a261;
-$link-active: #007bff;
-$background-light: #f9f9f9;
-$border-color: #ddd;
-$spacing-unit: 2rem;
-$font-size-base: 1rem;
+@use "sass:map";
 
-// Mixins for Animations buttons
-@mixin button-hover {
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    &:hover {
-    transform: scale(1.1);
-    background-color: #f0f0f0;
-    }
+// Import Bootstrap
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css";
+
+// Custom Variables
+$primary-color: #007bff;
+$secondary-color: #ff9800;
+$dark-color: #212529;
+$light-color: #f8f9fa;
+
+// Typography
+$font-family-base: 'Arial', sans-serif;
+
+// Mixins
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-// Reset
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+// Global Styles
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    color: $primary-text;
+    font-family: $font-family-base;
+    body {
+  background: linear-gradient(to bottom, #2c3e50, #1a1a1a);
+  color: #f4f4f4;
+  line-height: 1.6;
+}
 }
 
-// Header
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem $spacing-unit;
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+// Navbar
+.navbar {
+    padding: 1rem 0;
 
-.logo-placeholder {
-    width: 50px;
-    height: 50px;
-    background-color: #ccc;
-    }
-
-.nav {
-    ul {
-    display: flex;
-    list-style: none;
-    }
-
-    li {
-    margin-left: 1.5rem;
-    }
-
-    a {
-    text-decoration: none;
-    color: $secondary-text;
-    font-weight: bold;
-
-    &.active {
-        color: $link-active;
-    }
-
-    &:hover {
-        color: $link-active;
-    }
-    }
-    }
-}
-
-// Hero Section
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3rem $spacing-unit;
-    background-color: $background-light;
-
-h1 {
-    font-size: 2.5rem;
-    color: #000;
-    margin-bottom: 0.5rem;
-}
-
-h2 {
-    font-size: 1.8rem;
-    color: $secondary-text;
-    margin-bottom: 1.5rem;
-}
-
-.hero-content {
-    display: flex;
-    justify-content: center;
-    gap: $spacing-unit;
-    max-width: 1200px;
-    width: 100%;
-    margin-bottom: $spacing-unit;
-
-    .hero-text {
-    flex: 1;
-
-    p {
+    .navbar-logo {
         font-size: 1.5rem;
-        margin-bottom: 0.5rem;
-
-        &.highlight {
-        color: $highlight;
         font-weight: bold;
+        color: $primary-color;
+    }
+
+    .nav-link {
+        color: $dark-color;
+        margin-right: 1rem;
+        &:hover {
+            color: $primary-color;
         }
     }
-    }
 
-    .hero-description {
-    flex: 1;
-
-    p {
-        font-size: $font-size-base;
-        margin-bottom: 1rem;
-
-        &.highlight {
-        color: $highlight;
-        font-weight: bold;
+    .nav-btn {
+        background-color: $primary-color;
+        border: none;
+        &:hover {
+            background-color: darken($primary-color, 10%);
         }
-    }
     }
 }
 
-.hero-images {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    width: 100%;
-    max-width: 1200px;
+// Main Content
+.main-title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $dark-color;
+}
+
+.main-subtitle {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: $dark-color;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: $dark-color;
+}
+
+.section-subtitle {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: $secondary-color;
+}
+
+.sidebar-text {
+    font-size: 1rem;
+    color: $dark-color;
+    line-height: 1.6;
+}
+
+// Cards
+.card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 
     .image-placeholder {
-    width: 33.33%;
-    height: 150px;
-    background-color: #ccc;
-    }
-}
-}
-
-// Blog Posts Section
-.blog-posts {
-    padding: 3rem $spacing-unit;
-
-.posts-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: $spacing-unit;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.post-card {
-    border: 1px solid $border-color;
-    padding: 1rem;
-    text-align: left;
-
-    .post-image-placeholder {
-    width: 100%;
-    height: 150px;
-    background-color: #ccc;
-    margin-bottom: 1rem;
+        width: 100%;
+        height: 200px;
+        background-color: #d3d3d3;
+        border-radius: 10px;
     }
 
-    h3 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: $dark-color;
     }
 
-    p {
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
+    .card-text {
+        font-size: 0.9rem;
+        color: $dark-color;
     }
 
-    .post-meta {
-    font-size: 0.8rem;
-    color: $secondary-text;
+    .card-meta {
+        font-size: 0.8rem;
+        color: #6c757d;
     }
 }
 
+// Pagination
 .pagination {
-    display: flex;
-    justify-content: center;
-    margin-top: $spacing-unit;
-    gap: 1rem;
-
-    .pagination-btn {
-    padding: 0.5rem 1rem;
-    border: 1px solid $border-color;
-    cursor: pointer;
-    @include button-hover;
+    .page-link {
+        color: $primary-color;
+        border: none;
+        &:hover {
+            background-color: $light-color;
+            color: darken($primary-color, 10%);
+        }
     }
-}
+
+    .page-item.active .page-link {
+        background-color: $primary-color;
+        color: white;
+    }
 }
 
 // Footer
 .footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem $spacing-unit;
-    background-color: $background-light;
-    border-top: 1px solid $border-color;
+    padding: 2rem 0;
+    background-color: $light-color;
 
-.footer-logo-placeholder {
-    width: 50px;
-    height: 50px;
-    background-color: #ccc;
-    margin-bottom: 1rem;
-}
-
-.footer-nav {
-    ul {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
+    .footer-logo {
+        width: 100px;
+        height: 50px;
+        background-color: #d3d3d3;
+        margin-bottom: 1rem;
     }
 
-    a {
-    text-decoration: none;
-    color: $secondary-text;
-
-    &:hover {
-        color: $link-active;
+    .footer-links {
+        a {
+            margin: 0 1rem;
+            color: $dark-color;
+            text-decoration: none;
+            &:hover {
+                color: $primary-color;
+            }
+        }
     }
-    }
-}
-}
-
-// Responsive Design
-@media (max-width: 768px) {
-.header {
-    flex-direction: column;
-    text-align: center;
-
-    .nav {
-    ul {
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    li {
-        margin: 0;
-    }
-    }
-}
-
-.hero {
-    .hero-content {
-    flex-direction: column;
-    text-align: center;
-    }
-
-    .hero-images {
-    flex-direction: column;
-    align-items: center;
-
-    .image-placeholder {
-        width: 100%;
-    }
-    }
-
-    h1 {
-    font-size: 2rem;
-    }
-
-    h2 {
-    font-size: 1.5rem;
-    }
-}
-
-.blog-posts {
-    .posts-grid {
-        grid-template-columns: 1fr;
-    }
-}
 }
